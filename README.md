@@ -16,7 +16,7 @@ Portable AppImage builds of the [Zed](https://zed.dev) high-performance code edi
 
 ### Standard Build
 ```bash
-wget https://github.com/yourusername/zedx-appimage/releases/latest/download/zedX-dev-v0.225.0-arch-x86_64.AppImage
+wget https://github.com/debuggerdragon311/zedx-appimage/releases/latest/download/zedX-dev-v0.225.0-arch-x86_64.AppImage
 chmod +x zedX-dev-v0.225.0-arch-x86_64.AppImage
 ./zedX-dev-v0.225.0-arch-x86_64.AppImage
 ```
