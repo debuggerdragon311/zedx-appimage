@@ -1,5 +1,5 @@
 # ZedX AppImage
-
+[![Zed Version](https://img.shields.io/badge/Zed-v0.225.0-lightgreen.svg)](https://zed.dev)
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![GitHub release](https://img.shields.io/github/release/debuggerdragon311/zedx-appimage.svg)](https://github.com/debuggerdragon311/zedx-appimage/releases)
 
