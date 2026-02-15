@@ -30,4 +30,3 @@ chmod +x zedX-dev-v0.225.0-arch-x86_64.AppImage
 ## Disclaimer
 
 This is an unofficial build. For official releases, visit [zed.dev](https://zed.dev).
-```
