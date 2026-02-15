@@ -8,7 +8,6 @@ Portable AppImage builds of the [Zed](https://zed.dev) high-performance code edi
 ## Features
 
 - ✅ **Zero Installation** - Download and run immediately
-- 💾 **Portable Config** - Settings stored in `~/.config/zedx-portable/`
 - 🚀 **GPU Accelerated** - Full performance with Vulkan support
 - 📦 **Self-Contained** - All dependencies bundled
 
