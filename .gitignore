@@ -1,0 +1,7 @@
+*.AppImage
+*.enc
+/usr/bin/zed
+/config/
+/squashfs-root/
+*.swp
+*.tmp

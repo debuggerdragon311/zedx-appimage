@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Zed
+Comment=High-performance code editor
+Exec=AppRun %F
+Icon=zed
+Terminal=false
+Categories=Development;TextEditor;IDE;
+StartupNotify=true

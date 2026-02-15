@@ -1,0 +1,10 @@
+#!/bin/bash
+HERE="$(dirname "$(readlink -f "${0}")")"
+
+# Setup portable config in user's home directory, not inside the AppImage
+export ZED_PORTABLE_DIR="$HOME/.config/zedx-portable"
+mkdir -p "$ZED_PORTABLE_DIR"
+export LD_LIBRARY_PATH="$HERE/usr/lib:$LD_LIBRARY_PATH"
+
+# Run Zed
+exec "$HERE/usr/bin/zed" "$@"
