@@ -138,6 +138,21 @@ zedx-appimage/
 - [ ] Minimal variant without bundled libs
 - [ ] Integration with AppImageHub
 
+## Release Cadence
+
+ZedX AppImage follows Zed's official releases with a slight delay for building and testing:
+
+| Release Type | Description | Status |
+|--------------|-------------|--------|
+| 🔥 **Development** | Latest `main` branch features | Usually available within 24h |
+| 🧪 **Pre-release** | Beta versions for testing | Available on request |
+| ✅ **Stable** | Production-ready releases | Priority, typically within 48h |
+
+**Current Status:**
+- Latest Dev: ✅ v0.225.0+dev
+- Pre-release: ⏳ v0.224.1-pre (coming soon)
+- Stable: ⏳ v0.223.3 (coming soon)
+
 ## Contributing
 
 Contributions welcome! Feel free to:
