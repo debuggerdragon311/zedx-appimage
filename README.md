@@ -15,7 +15,7 @@ The [Zed editor](https://zed.dev) is blazing fast, but lacks official AppImage r
 - 🚀 **GPU Accelerated** – Full Vulkan support for 120 FPS rendering
 - 📦 **Truly Portable** – All dependencies bundled (OpenSSL, XCB, XKB libraries included)
 - 🔒 **Stable & Tested** – Built from official Zed source with quality assurance
-- 💾 **Lightweight** – 610 MB compressed package with everything you need
+- 💾 **Lightweight** – <250 MB compressed package with everything you need
 
 ## Quick Start
 
