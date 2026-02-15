@@ -1,6 +1,6 @@
 # ZedX AppImage
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![GitHub release](https://img.shields.io/github/release/debuggerdragon311/zedx-appimage.svg)](https://github.com/debuggerdragon311/zedx-appimage/releases)
 
 Portable AppImage builds of the [Zed](https://zed.dev) high-performance code editor. Run Zed anywhere on Linux without installation.
