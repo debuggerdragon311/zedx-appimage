@@ -151,7 +151,7 @@ ZedX AppImage follows Zed's official releases with a slight delay for building a
 **Current Status:**
 - Latest Dev: ✅ v0.225.0+dev
 - Pre-release: ⏳ v0.224.1-pre (coming soon)
-- Stable: ⏳ v0.223.3 (coming soon)
+- Stable: ✅ v0.223.3
 
 ## Contributing
 
