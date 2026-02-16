@@ -1,15 +1,15 @@
-> [!WARNING]
+<!-- > [!WARNING]
 > **🚧 MAINTENANCE IN PROGRESS**  
 > We're improving compatibility across Linux distributions. New builds with better glibc support coming within 24-48 hours.  
 > [Last stable release available here](https://github.com/debuggerdragon311/zedx-appimage/releases/tag/v0.223.3-r)
 
----
+- -->
 
 # ZedX AppImage
 
-[![Zed Version](https://img.shields.io/badge/Zed-v0.225.0-lightgreen.svg)](https://zed.dev)
+[![Zed Version](https://img.shields.io/badge/Zed-v0.223.3-lightgreen.svg)](https://zed.dev)
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![GitHub release](https://img.shields.io/github/release/debuggerdragon311/zedx-appimage.svg)](https://github.com/debuggerdragon311/zedx-appimage/releases)
+[![GitHub release](https://img.shields.io/github/release/debuggerdragon311/zedx-appimage.svg)](https://github.com/debuggerdragon311/zedx-appimage/releases/v0.223.3-r)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://github.com/debuggerdragon311/zedx-appimage)
 
 > Portable, self-contained AppImage builds of the Zed high-performance code editor. Zero installation, maximum performance.
