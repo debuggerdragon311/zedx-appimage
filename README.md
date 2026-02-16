@@ -1,3 +1,10 @@
+> [!WARNING]
+> **🚧 MAINTENANCE IN PROGRESS**  
+> We're improving compatibility across Linux distributions. New builds with better glibc support coming within 24-48 hours.  
+> [Last stable release available here](https://github.com/debuggerdragon311/zedx-appimage/releases/tag/v0.223.3-r)
+
+---
+
 # ZedX AppImage
 
 [![Zed Version](https://img.shields.io/badge/Zed-v0.225.0-lightgreen.svg)](https://zed.dev)
@@ -17,17 +24,37 @@ The [Zed editor](https://zed.dev) is blazing fast, but lacks official AppImage r
 - 🔒 **Stable & Tested** – Built from official Zed source with quality assurance
 - 💾 **Lightweight** – <250 MB compressed package with everything you need
 
+## Downloads
+
+**Choose the right build for your system:**
+
+### 🏔️ Arch Build (Bleeding Edge)
+- **File:** `zedX-v0.225.0-arch-x86_64.AppImage`
+- **For:** Arch Linux, Fedora 40+, openSUSE Tumbleweed, and other rolling-release distros
+- **Requirements:** glibc 2.38+ (check with `ldd --version`)
+- **Optimized for:** Latest features and performance
+
+### 🐧 Compatible Build (Stable Distros)
+- **File:** `zedX-v0.225.0-compat-x86_64.AppImage`
+- **For:** Debian 11-12, Ubuntu 20.04-24.04, RHEL 8-9, and enterprise Linux
+- **Requirements:** glibc 2.31+ (most stable distros)
+- **Recommended for:** Maximum compatibility
+
+**Not sure which to download?** → Use the **compat** build (works everywhere)
+
+[📥 Download Latest Release](https://github.com/debuggerdragon311/zedx-appimage/releases/latest)
+
 ## Quick Start
 
 ```bash
-# Download the latest release
-wget https://github.com/debuggerdragon311/zedx-appimage/releases/latest/download/zedX-dev-v0.225.0-arch-x86_64.AppImage
+# Download the compatible build (recommended)
+wget https://github.com/debuggerdragon311/zedx-appimage/releases/latest/download/zedX-v0.225.0-compat-x86_64.AppImage
 
 # Make it executable
-chmod +x zedX-dev-v0.225.0-arch-x86_64.AppImage
+chmod +x zedX-v0.225.0-compat-x86_64.AppImage
 
 # Run immediately
-./zedX-dev-v0.225.0-arch-x86_64.AppImage
+./zedX-v0.225.0-compat-x86_64.AppImage
 ```
 
 **That's it!** No package managers, no dependency hunting, no root required.
@@ -38,6 +65,20 @@ chmod +x zedX-dev-v0.225.0-arch-x86_64.AppImage
 - **Graphics:** Vulkan-capable GPU with updated drivers
 - **Architecture:** x86_64 (64-bit)
 - **Disk Space:** 610 MB
+
+## Portable Mode
+
+Create `.home` and `.config` folders next to the AppImage to keep all settings portable:
+
+```bash
+# Create portable directories
+mkdir zedX-v0.225.0-compat-x86_64.AppImage.{home,config}
+
+# Run - settings will be stored in these folders
+./zedX-v0.225.0-compat-x86_64.AppImage
+```
+
+All configuration and data will be stored in these folders instead of `~/.config/`, making it truly portable across machines or USB drives.
 
 ## Building from Source
 
@@ -75,10 +116,49 @@ wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appima
 chmod +x appimagetool-x86_64.AppImage
 
 # Build the AppImage
-./appimagetool-x86_64.AppImage zed.fk.app zedX-dev-v0.225.0-arch-x86_64.AppImage
+./appimagetool-x86_64.AppImage zed.fk.app zedX-v0.225.0-compat-x86_64.AppImage
+```
+
+### Building for Maximum Compatibility
+
+For the `-compat` build, we recommend building on Debian 12 or Ubuntu 22.04:
+
+```bash
+# On Debian 12 / Ubuntu 22.04
+sudo apt update && sudo apt install -y \
+    build-essential clang cmake curl git pkg-config \
+    libx11-dev libx11-xcb-dev libxcb1-dev libxcb-render0-dev \
+    libxcb-shape0-dev libxcb-xfixes0-dev libxkbcommon-dev \
+    libxkbcommon-x11-dev libssl-dev libfontconfig1-dev \
+    libfreetype6-dev libasound2-dev libvulkan-dev libwayland-dev \
+    libxcursor-dev libxi-dev libxrandr-dev mesa-vulkan-drivers libzstd-dev
+
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+
+# Build
+export CC=clang
+export CXX=clang++
+cd zed
+cargo build --release -j 2
 ```
 
 ## Troubleshooting
+
+### Error: GLIBC version not found
+
+You downloaded the `-arch` build but need the `-compat` build instead.
+
+**Solution:** Download the `-compat` variant from releases.
+
+**How to check your glibc version:**
+```bash
+ldd --version
+```
+
+If you see 2.36 or lower → use `-compat`  
+If you see 2.38 or higher → either build works
 
 ### Permission Denied on External Drives
 
@@ -86,9 +166,9 @@ If you get `execv error: Permission denied`:
 
 ```bash
 # Move to your home directory
-mv zedX-dev-v0.225.0-arch-x86_64.AppImage ~/
+mv zedX-*.AppImage ~/
 cd ~
-./zedX-dev-v0.225.0-arch-x86_64.AppImage
+./zedX-*.AppImage
 ```
 
 This happens when external drives are mounted with the `noexec` flag for security.
@@ -104,6 +184,7 @@ vulkaninfo | grep "deviceName"
 # Install Vulkan (if missing)
 # Arch: sudo pacman -S vulkan-icd-loader
 # Debian/Ubuntu: sudo apt install mesa-vulkan-drivers
+# Fedora: sudo dnf install vulkan-loader
 ```
 
 ## Project Structure
@@ -113,7 +194,7 @@ zedx-appimage/
 ├── LICENSE                    # AGPL-3.0 license
 ├── README.md                  # This file
 └── zed.fk.app/               # AppImage source directory
-    ├── AppRun                # Launch script
+    ├── AppRun                # Launch script with portable mode support
     ├── zed.desktop           # Desktop integration
     ├── zed.png               # Application icon (512x512)
     └── usr/
@@ -133,10 +214,12 @@ zedx-appimage/
 
 ## Roadmap
 
+- [x] Multiple build variants for different distros
+- [x] Portable configuration support
 - [ ] Automated builds on new Zed releases
 - [ ] Multiple architecture support (ARM64)
-- [ ] Minimal variant without bundled libs
 - [ ] Integration with AppImageHub
+- [ ] Delta updates for faster releases
 
 ## Release Cadence
 
@@ -149,9 +232,30 @@ ZedX AppImage follows Zed's official releases with a slight delay for building a
 | ✅ **Stable** | Production-ready releases | Priority, typically within 48h |
 
 **Current Status:**
-- Latest Dev: ✅ v0.225.0+dev
-- Pre-release: ⏳ v0.224.1-pre (coming soon)
+- Latest Dev: ✅ v0.225.0+dev (multiple variants)
 - Stable: ✅ v0.223.3
+
+## FAQ
+
+### Which AppImage should I download?
+
+**Short answer:** Download the `-compat` build unless you're on Arch/Fedora.
+
+**Long answer:**
+- `-arch`: Built on latest systems, optimized for bleeding-edge distros (glibc 2.38+)
+- `-compat`: Built on Debian 12, works on stable and older systems (glibc 2.31+)
+
+### Can I run multiple instances?
+
+Yes! Use the `--new-window` flag:
+
+```bash
+./zedX-*.AppImage --new-window
+```
+
+### How do I update?
+
+Simply download the new AppImage and replace the old one. Your settings in `~/.config/zed/` are preserved (or in portable `.config/` folder if using portable mode).
 
 ## Contributing
 
