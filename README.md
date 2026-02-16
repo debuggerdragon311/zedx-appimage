@@ -22,20 +22,20 @@ The [Zed editor](https://zed.dev) is blazing fast, but lacks official AppImage r
 - 🚀 **GPU Accelerated** – Full Vulkan support for 120 FPS rendering
 - 📦 **Truly Portable** – All dependencies bundled (OpenSSL, XCB, XKB libraries included)
 - 🔒 **Stable & Tested** – Built from official Zed source with quality assurance
-- 💾 **Lightweight** – <250 MB compressed package with everything you need
+- 💾 **Lightweight** – <150 MB compressed package with everything you need
 
 ## Downloads
 
 **Choose the right build for your system:**
 
 ### 🏔️ Arch Build (Bleeding Edge)
-- **File:** `zedX-v0.225.0-arch-x86_64.AppImage`
+- **File:** `zedX-v0.223.3-arch-x86_64.AppImage`
 - **For:** Arch Linux, Fedora 40+, openSUSE Tumbleweed, and other rolling-release distros
 - **Requirements:** glibc 2.38+ (check with `ldd --version`)
 - **Optimized for:** Latest features and performance
 
 ### 🐧 Compatible Build (Stable Distros)
-- **File:** `zedX-v0.225.0-compat-x86_64.AppImage`
+- **File:** `zedX-v0.223.3-compat-x86_64.AppImage`
 - **For:** Debian 11-12, Ubuntu 20.04-24.04, RHEL 8-9, and enterprise Linux
 - **Requirements:** glibc 2.31+ (most stable distros)
 - **Recommended for:** Maximum compatibility
@@ -48,23 +48,16 @@ The [Zed editor](https://zed.dev) is blazing fast, but lacks official AppImage r
 
 ```bash
 # Download the compatible build (recommended)
-wget https://github.com/debuggerdragon311/zedx-appimage/releases/latest/download/zedX-v0.225.0-compat-x86_64.AppImage
+wget https://github.com/debuggerdragon311/zedx-appimage/releases/latest/download/zedX-v0.223.3-compat-x86_64.AppImage
 
 # Make it executable
-chmod +x zedX-v0.225.0-compat-x86_64.AppImage
+chmod +x zedX-v0.223.3-compat-x86_64.AppImage
 
 # Run immediately
-./zedX-v0.225.0-compat-x86_64.AppImage
+./zedX-v0.223.3-compat-x86_64.AppImage
 ```
 
 **That's it!** No package managers, no dependency hunting, no root required.
-
-## System Requirements
-
-- **OS:** Any modern Linux distribution (kernel 4.x+)
-- **Graphics:** Vulkan-capable GPU with updated drivers
-- **Architecture:** x86_64 (64-bit)
-- **Disk Space:** 610 MB
 
 ## Portable Mode
 
@@ -72,10 +65,10 @@ Create `.home` and `.config` folders next to the AppImage to keep all settings p
 
 ```bash
 # Create portable directories
-mkdir zedX-v0.225.0-compat-x86_64.AppImage.{home,config}
+mkdir zedX-v0.223.3-compat-x86_64.AppImage.{home,config}
 
 # Run - settings will be stored in these folders
-./zedX-v0.225.0-compat-x86_64.AppImage
+./zedX-v0.223.3-compat-x86_64.AppImage
 ```
 
 All configuration and data will be stored in these folders instead of `~/.config/`, making it truly portable across machines or USB drives.
@@ -116,7 +109,7 @@ wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appima
 chmod +x appimagetool-x86_64.AppImage
 
 # Build the AppImage
-./appimagetool-x86_64.AppImage zed.fk.app zedX-v0.225.0-compat-x86_64.AppImage
+./appimagetool-x86_64.AppImage zed.fk.app zedX-v0.223.3-compat-x86_64.AppImage
 ```
 
 ### Building for Maximum Compatibility
