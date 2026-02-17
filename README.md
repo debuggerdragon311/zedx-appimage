@@ -1,15 +1,15 @@
 >[!WARNING]
 > **🚧 MAINTENANCE IN PROGRESS**  
 > I'm improving compatibility across Linux distributions. New builds with better glibc support coming within 24-48 hours.  
-> [Last stable release available here](https://github.com/debuggerdragon311/zedx-appimage/releases/tag/v0.223.3-r)
+> [Last stable release available here](https://github.com/debuggerdragon311/zedx-appimage/releases/tag/v0.223.4)
 
 
 
 # ZedX AppImage
 
-[![Zed Version](https://img.shields.io/badge/Zed-v0.223.3-lightgreen.svg)](https://zed.dev)
+[![Zed Version](https://img.shields.io/badge/Zed-v0.223.4-lightgreen.svg)](https://zed.dev)
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![GitHub release](https://img.shields.io/github/release/debuggerdragon311/zedx-appimage.svg)](https://github.com/debuggerdragon311/zedx-appimage/releases/v0.223.3-r)
+[![GitHub release](https://img.shields.io/github/release/debuggerdragon311/zedx-appimage.svg)](https://github.com/debuggerdragon311/zedx-appimage/releases/v0.223.4)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://github.com/debuggerdragon311/zedx-appimage)
 
 > Portable, self-contained AppImage builds of the Zed high-performance code editor. Zero installation, maximum performance.
@@ -48,13 +48,13 @@ The [Zed editor](https://zed.dev) is blazing fast, but lacks official AppImage r
 
 ```bash
 # Download the compatible build (recommended)
-wget https://github.com/debuggerdragon311/zedx-appimage/releases/latest/download/zedX-v0.223.3-compat-x86_64.AppImage
+wget https://github.com/debuggerdragon311/zedx-appimage/releases/latest/download/zedX-v0.223.4-compat+mix-x86_64.AppImage
 
 # Make it executable
-chmod +x zedX-v0.223.3-compat-x86_64.AppImage
+chmod +x zedX-v0.223.4-compat+mix-x86_64.AppImage
 
 # Run immediately
-./zedX-v0.223.3-compat-x86_64.AppImage
+./zedX-v0.223.4-compat+mix-x86_64.AppImage
 ```
 
 **That's it!** No package managers, no dependency hunting, no root required.
@@ -65,10 +65,10 @@ Create `.home` and `.config` folders next to the AppImage to keep all settings p
 
 ```bash
 # Create portable directories
-mkdir zedX-v0.223.3-compat-x86_64.AppImage.{home,config}
+mkdir zedX-v0.223.4-compat+mix-x86_64.AppImage.{home,config}
 
 # Run - settings will be stored in these folders
-./zedX-v0.223.3-compat-x86_64.AppImage
+./zedX-v0.223.4-compat+mix-x86_64.AppImage
 ```
 
 All configuration and data will be stored in these folders instead of `~/.config/`, making it truly portable across machines or USB drives.
@@ -109,7 +109,7 @@ wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appima
 chmod +x appimagetool-x86_64.AppImage
 
 # Build the AppImage
-./appimagetool-x86_64.AppImage zed.fk.app zedX-v0.223.3-compat-x86_64.AppImage
+./appimagetool-x86_64.AppImage zed.fk.app zedX-v0.223.4-compat+mix-x86_64.AppImage
 ```
 
 ### Building for Maximum Compatibility
