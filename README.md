@@ -14,6 +14,8 @@
 
 > Portable, self-contained AppImage builds of the Zed high-performance code editor. Zero installation, maximum performance.
 
+<img width="1288" height="804" alt="Image" src="https://github.com/user-attachments/assets/687a86c4-b5e7-4082-84ce-516079145a06" />
+
 ## Why ZedX AppImage?
 
 The [Zed editor](https://zed.dev) is blazing fast, but lacks official AppImage releases. ZedX bridges that gap with:
