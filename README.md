@@ -1,8 +1,8 @@
->[!WARNING]
+<!-- >[!WARNING]
 > **🚧 MAINTENANCE IN PROGRESS**  
 > I'm improving compatibility across Linux distributions. New builds with better glibc support coming within 24-48 hours.  
 > [Last stable release available here](https://github.com/debuggerdragon311/zedx-appimage/releases/tag/v0.223.4)
-
+-->
 
 
 # ZedX AppImage
